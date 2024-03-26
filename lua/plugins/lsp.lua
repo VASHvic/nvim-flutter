@@ -106,14 +106,6 @@ return {
 				},
 			})
 
-			lsp_config.astro.setup({
-				capabilities = capabilities,
-			})
-
-			lsp_config.tailwindcss.setup({
-				capabilities = capabilities,
-			})
-
 			lsp_config.tsserver.setup({
 				capabilities = capabilities,
 			})
