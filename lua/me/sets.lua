@@ -10,7 +10,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -30,9 +30,10 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-vim.g.netrw_keepj = ""
-vim.g.netrw_fastbrowse = 2
-
-vim.opt.splitright = true
+vim.opt.autoread=true
+-- No se que fan
+-- vim.g.netrw_keepj = ""
+-- vim.g.netrw_fastbrowse = 2
+-- vim.opt.splitright = true
 
 

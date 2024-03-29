@@ -20,8 +20,6 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					-- dart sdk ships with LSP
-					"astro",
-					"tailwindcss",
 					"tsserver",
 					"lua_ls",
 				},
