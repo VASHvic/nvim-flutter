@@ -1,7 +1,6 @@
 return {
 		"hrsh7th/nvim-cmp",
 	config = function()
-		-- COMPLETION
     local cmp = require("cmp")
     local cmp_mappings = cmp.mapping.preset.insert({
       ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -13,8 +12,7 @@ return {
       ["<CR>"] = cmp.mapping.confirm({ select = false }),
     })
 
-		-- disable completion with tab
-		-- this helps with copilot setup
+		-- disable completion with tab (Copilot)
 		cmp_mappings["<Tab>"] = vim.NIL
 		cmp_mappings["<S-Tab>"] = vim.NIL
 
@@ -50,7 +48,6 @@ return {
 			dependencies = {
 
 				"saadparwaiz1/cmp_luasnip",
-				-- snippets
 				"rafamadriz/friendly-snippets",
 			},
 		},
