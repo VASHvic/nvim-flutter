@@ -57,5 +57,18 @@ return {
 				})
 			end
 		end)
+
+		-- Format after save ( ho tinc comentat per que
+    -- no funciona en el ubuntu de wsl hasta que actualitze glibc
+
+		-- vim.api.nvim_exec(
+		-- 	[[
+		-- 	augroup FormatAutogroup
+		-- 		autocmd!
+		-- 		autocmd BufWritePost * FormatWrite
+		-- 	augroup END
+		-- ]],
+		-- 	false
+		-- )
 	end,
 }
