@@ -21,7 +21,7 @@ return {
 				ensure_installed = {
 					-- dart sdk ships with LSP
 					"tsserver",
-					"lua_ls",
+					"lua_ls"
 				},
 			})
 

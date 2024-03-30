@@ -17,9 +17,6 @@ return {
 			-- dart = {
 			-- 	require("formatter.filetypes.dart").dartformat,
 			-- },
-			graphql = {
-				require("formatter.filetypes.graphql").prettier,
-			},
 			["*"] = {
 				-- "formatter.filetypes.any" defines default configurations for any
 				-- filetype
