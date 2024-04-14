@@ -11,11 +11,13 @@ return {
 			require("treesitter-context").setup()
 		end,
 	},
-
 	{
 		"tpope/vim-fugitive",
 		config = function()
-			vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+			vim.keymap.set("n", "<leader>gs", function()vim.cmd('vert Git') end)
+			vim.keymap.set("n", "<leader>gv", function()vim.cmd('Gvdiffsplit') end)
+
+      -- estos dos no se usarlos
 			vim.keymap.set("n", "<leader>gh", ":diffget //2<CR>")
 			vim.keymap.set("n", "<leader>gl", ":diffget //3<CR>")
 		end,
