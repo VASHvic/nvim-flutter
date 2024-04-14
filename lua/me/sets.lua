@@ -24,7 +24,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 
 vim.opt.colorcolumn = "80"
 
@@ -32,6 +32,21 @@ vim.opt.autoread=true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.splitright = true
 
--- mirar si use undodir
+-- mirar si use undodir-- Keep signcolumn on by default
+vim.opt.signcolumn = 'yes'
 --vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
---vim.opt.undofile = true
+vim.opt.undofile = true
+
+-- opcionss kickstart agegides
+
+-- Enable mouse mode, can be useful for resizing splits for example!
+vim.opt.mouse = 'a'
+-- Don't show the mode, since it's already in the status line
+vim.opt.showmode = false
+-- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+-- Keep signcolumn on by default
+vim.opt.signcolumn = 'yes'
+-- Show which line your cursor is on
+vim.opt.cursorline = true

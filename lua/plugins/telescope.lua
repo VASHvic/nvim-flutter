@@ -2,6 +2,7 @@ return {
 	"nvim-telescope/telescope.nvim",
 	config = function()
 		local builtin = require("telescope.builtin")
+    -- TODO mirar com usa kickstart telescope per a definitions references y tal
 
 		vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "[S]earch [F]iles" })
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[S]earch [F]iles" })
