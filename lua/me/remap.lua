@@ -34,3 +34,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set('n', '<Leader>q', ':ccl<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>o', ':copen<CR>', { noremap = true, silent = true })
 
+
+vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +5<CR>zz")
+vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -5<CR>zz")
