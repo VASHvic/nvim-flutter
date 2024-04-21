@@ -21,8 +21,12 @@ return {
 				ensure_installed = {
 					-- dart sdk ships with LSP
 					"tsserver",
-					"lua_ls"
+					"angularls",
+					"lua_ls",
+					"html",
+					"cssls",
 				},
+				automatic_installation = true,
 			})
 
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -102,6 +106,18 @@ return {
 						showTodos = true,
 					},
 				},
+			})
+
+			lsp_config.angularls.setup({
+				capabilities = capabilities,
+			})
+
+			lsp_config.html.setup({
+				capabilities = capabilities,
+			})
+
+			lsp_config.cssls.setup({
+				capabilities = capabilities,
 			})
 
 			lsp_config.tsserver.setup({
