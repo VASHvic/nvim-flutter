@@ -18,9 +18,8 @@ return {
 			-- 	require("formatter.filetypes.dart").dartformat,
 			-- },
 			["*"] = {
-				-- "formatter.filetypes.any" defines default configurations for any
-				-- filetype
-				require("formatter.filetypes.any").remove_trailing_whitespace,
+				vim.notify("No formatter defined", vim.log.levels.WARN),
+				-- require("formatter.filetypes.any").remove_trailing_whitespace,
 			},
 		}
 
@@ -28,6 +27,13 @@ return {
 			logging = true,
 			log_level = vim.log.levels.WARN,
 			filetype = settings,
+		})
+
+		-- BufWritePre es ralla al ser asyncrono
+		vim.api.nvim_create_autocmd("BufWritePost", {
+			callback = function()
+				vim.cmd([[Format]])
+			end,
 		})
 
 		vim.keymap.set("n", "<leader>gf", function()
@@ -59,7 +65,7 @@ return {
 		end)
 
 		-- Format after save ( ho tinc comentat per que
-    -- no funciona en el ubuntu de wsl hasta que actualitze glibc
+		-- no funciona en el ubuntu de wsl hasta que actualitze glibc
 
 		-- vim.api.nvim_exec(
 		-- 	[[

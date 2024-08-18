@@ -8,14 +8,14 @@ local yank_group = augroup("HighlightYank", {})
 local format_options_group = augroup("FormatOptions", { clear = true })
 
 autocmd("TextYankPost", {
-	group = yank_group,
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({
-			higroup = "IncSearch",
-			timeout = 40,
-		})
-	end,
+  group = yank_group,
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = "IncSearch",
+      timeout = 40,
+    })
+  end,
 })
 
 -- This needs to be an auto command instead of simply putting this in your vimrc
@@ -26,13 +26,13 @@ autocmd("TextYankPost", {
 -- [filetype].vim file. So you need to to do the change after the ft file is
 -- loaded
 autocmd("BufEnter", {
-	group = format_options_group,
-	pattern = "*",
-	desc = "Set buffer local formatoptions.",
-	callback = function()
-		vim.opt_local.formatoptions:remove({
-			"r", -- Automatically insert the current comment leader after hitting <Enter> in Insert mode.
-			"o", -- Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
-		})
-	end,
+  group = format_options_group,
+  pattern = "*",
+  desc = "Set buffer local formatoptions.",
+  callback = function()
+    vim.opt_local.formatoptions:remove({
+      "r", -- Automatically insert the current comment leader after hitting <Enter> in Insert mode.
+      "o", -- Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
+    })
+  end,
 })
