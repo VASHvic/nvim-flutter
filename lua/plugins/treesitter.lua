@@ -15,6 +15,7 @@ return {
 				"scss",
 				"yaml",
 				"bash",
+				"go",
 			},
 			auto_install = true,
 			highlight = {

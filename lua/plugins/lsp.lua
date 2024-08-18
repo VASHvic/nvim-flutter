@@ -25,6 +25,7 @@ return {
 					"lua_ls",
 					"html",
 					"cssls",
+					"gopls",
 				},
 				automatic_installation = true,
 			})
@@ -121,6 +122,10 @@ return {
 			})
 
 			lsp_config.tsserver.setup({
+				capabilities = capabilities,
+			})
+
+			lsp_config.gopls.setup({
 				capabilities = capabilities,
 			})
 
